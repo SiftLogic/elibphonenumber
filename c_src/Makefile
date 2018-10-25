@@ -18,7 +18,7 @@ HOMEBREW  := $(shell { type brew; } 2>/dev/null)
 
 ifeq ($(UNAME_SYS), Darwin)
 	CC ?= cc
-	CXXFLAGS ?= -O3 -arch x86_64 -Wall
+	CXXFLAGS ?= -O3 -std=c++14 -arch x86_64 -Wall
 	LDFLAGS ?= -arch x86_64 -flat_namespace -undefined suppress
 else ifeq ($(UNAME_SYS), FreeBSD)
 	CC ?= cc
